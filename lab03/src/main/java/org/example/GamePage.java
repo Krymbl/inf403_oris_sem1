@@ -2,6 +2,7 @@ package org.example;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
@@ -14,7 +15,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @WebServlet("/game")
-public class GamePage extends HelloServlet {
+public class GamePage extends HttpServlet {
     final static Logger logger = LogManager.getLogger(GamePage.class);
 
     private final Map<String, GameState> gamers = new HashMap<>();
@@ -46,7 +47,7 @@ public class GamePage extends HelloServlet {
 
         List<Row> table = gameState.getTable();
         Row trow = table.get(Integer.parseInt(row) - 1);
-        trow.setT("k.jpg");
+        trow.setT("tic.jpg");
 
         request.setAttribute("table", table);
         request.setAttribute("uid", uid);

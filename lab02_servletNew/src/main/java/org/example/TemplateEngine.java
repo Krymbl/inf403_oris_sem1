@@ -34,6 +34,7 @@ public class TemplateEngine extends HttpServlet {
             String attributeValue = (String) request.getAttribute(attributeName);
             logger.debug(attributeName + " : " + attributeValue);
             params.put(attributeName, attributeValue);
+
         }
 
         String fileName = request.getServletPath().substring(1);

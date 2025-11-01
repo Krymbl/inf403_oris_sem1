@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить компьютер</title>
+</head>
+<body>
+<h1>Добавить новый компьютер</h1>
+<a href="/computerclub/">Домой</a> | <a href="show">Показать все</a>
+<br><br>
+
+<form method="post" action="/computerclub/add">
+    Название: <input type="text" name="name" required><br><br>
+    Процессор: <input type="text" name="processor" required><br><br>
+    Оперативная память (GB): <input type="number" name="ram" required><br><br>
+    Видеокарта: <input type="text" name="videoCard" required><br><br>
+    Цена за час: <input type="number" name="pricePerHour" required><br><br>
+    Доступен: <input type="checkbox" name="isAvailable" checked><br><br>
+
+    <input type="submit" value="Добавить компьютер">
+</form>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+        alert('Ошибка при сохранении компьютера!');
+    }
+</script>
+</body>
+</html>

@@ -20,12 +20,10 @@ public class FreemarkerTest extends HttpServlet {
         logger.debug(request.getServletPath());
 
 
-//        request.setAttribute("surname", "Романов");
-//        request.setAttribute("name", "Данил");
-//
-//        // Отрабатываем логику приложения
-//        // Отрисовка страницы - передаем дальше request
-//        request.getRequestDispatcher("/index.ftlh")
-//                .forward(request, response);
+
+        // Отрабатываем логику приложения
+        // Отрисовка страницы - передаем дальше request
+        request.getRequestDispatcher("/index.ftlh")
+                .forward(request, response);
     }
 }

@@ -22,9 +22,9 @@
     <table width="300">
         <#list table as r>
             <tr>
-                <td><img src = "/lab03/static/img/tac.svg"></td>
-                <td><img src = "/lab03/static/img/${r.s}"></td>
-                <td><img src = "/lab03/static/img/${r.t}"></td>
+                <td><img src = "/static/img/tac.svg"></td>
+                <td><img src = "/static/img/${r.s}"></td>
+                <td><img src = "/static/img/${r.t}"></td>
             </tr>
         </#list>
     </table>

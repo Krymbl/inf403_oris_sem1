@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить компьютер</title>
+</head>
+<body>
+<h1>Edit Computer</h1>
+<a href="/computerclub/show">Вернуться к списку</a>
+<br><br>
+
+<!-- ФОРМА -->
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+        alert('Ошибка при сохранении компьютера!');
+    }
+</script>
+</body>
+</html>
