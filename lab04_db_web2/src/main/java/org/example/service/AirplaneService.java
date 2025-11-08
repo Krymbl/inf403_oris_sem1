@@ -1,8 +1,8 @@
-package example.service;
+package org.example.service;
 
 import jakarta.servlet.http.HttpServletRequest;
-import example.model.Airplane;
-import example.repository.AirplaneRepository;
+import org.example.model.Airplane;
+import org.example.repository.AirplaneRepository;
 
 import java.util.List;
 

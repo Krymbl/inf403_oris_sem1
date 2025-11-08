@@ -2,9 +2,9 @@ package org.example;
 
 
 public class Row {
-    private String f = "пусто.jpg";
-    private String s = "пусто.jpg";
-    private String t = "пусто.jpg";
+    private String f = "empty.png";
+    private String s = "empty.png";
+    private String t = "empty.png";
 
     public String getF() {
         return f;

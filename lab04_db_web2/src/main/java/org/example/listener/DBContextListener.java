@@ -1,9 +1,8 @@
-package example.listener;
+package org.example.listener;
 
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
-import example.service.DbConnection;
 
 @WebListener
 public class DBContextListener implements ServletContextListener {

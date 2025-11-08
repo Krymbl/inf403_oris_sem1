@@ -17,39 +17,53 @@ import java.util.UUID;
 @WebServlet("/game")
 public class GamePage extends HttpServlet {
     final static Logger logger = LogManager.getLogger(GamePage.class);
-
-    private final Map<String, GameState> gamers = new HashMap<>();
+    private final GameService gameService = new GameService();
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.debug(request.getServletPath());
 
         String uid = UUID.randomUUID().toString();
-        GameState gameState = new GameState();
-        gamers.put(uid, gameState);
+        gameService.createNewGame(uid);
+        GameState gameState = gameService.getGameState(uid);
 
+
+        request.setAttribute("status", gameState.getStatus());
         request.setAttribute("table", gameState.getTable());
         request.setAttribute("uid", uid);
 
         request.getRequestDispatcher("/game.ftlh")
                 .forward(request, response);
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String uid = request.getParameter("uid");
+        String action = request.getParameter("action");
+
+        GameState gameState = gameService.getGameState(uid);
+
+        if ("restart".equals(action)) {
+            gameService.restart(uid);
+
+
+            request.setAttribute("status", gameState.getStatus());
+            request.setAttribute("table", gameState.getTable());
+            request.setAttribute("uid", uid);
+
+            request.getRequestDispatcher("/game.ftlh")
+                    .forward(request, response);
+            return;
+        }
+
         String row = request.getParameter("row");
         String column = request.getParameter("column");
-        String uid = request.getParameter("uid");
-
-        logger.debug(request.getServletPath());
-
 
         logger.debug("uid " + uid +" , row " + row + ", column " + column);
-        GameState gameState = gamers.get(uid);
 
-        List<Row> table = gameState.getTable();
-        Row trow = table.get(Integer.parseInt(row) - 1);
-        trow.setT("tic.jpg");
+        gameService.makeMove(uid, Integer.parseInt(row), Integer.parseInt(column));
 
-        request.setAttribute("table", table);
+        request.setAttribute("status", gameState.getStatus());
+        request.setAttribute("table", gameState.getTable());
         request.setAttribute("uid", uid);
 
         request.getRequestDispatcher("/game.ftlh")

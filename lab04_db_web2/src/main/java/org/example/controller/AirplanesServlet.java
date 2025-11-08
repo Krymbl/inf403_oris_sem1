@@ -1,4 +1,4 @@
-package example.controller;
+package org.example.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import example.service.AirplaneService;
+import org.example.service.AirplaneService;
 
 import java.io.IOException;
 

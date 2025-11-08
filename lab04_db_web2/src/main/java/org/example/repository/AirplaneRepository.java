@@ -1,7 +1,7 @@
-package example.repository;
+package org.example.repository;
 
-import example.model.Airplane;
-import example.service.DbConnection;
+import org.example.model.Airplane;
+import org.example.service.DbConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
