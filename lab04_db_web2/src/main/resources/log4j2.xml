@@ -8,8 +8,8 @@
 
     <Appenders>
         <RollingFile name="LOCALHOST"
-                     fileName="${logdir}/lab1_02.log"
-                     filePattern="${logdir}/lab04.%d{yyyy-MM-dd}-%i.log">
+                     fileName="${logdir}/lab4_dw_web2.log"
+                     filePattern="${logdir}/lab4_dw_web2.%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="${layout}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
@@ -24,7 +24,7 @@
             <AppenderRef ref="LOCALHOST" />
         </Root>
 
-        <Logger name="ru.itis.dis403"
+        <Logger name="inf403_oris_sem1.lab04_dw_web2"
                 level="debug" additivity="false">
             <AppenderRef ref="LOCALHOST" />
         </Logger>

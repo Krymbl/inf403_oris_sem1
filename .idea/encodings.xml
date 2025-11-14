@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Semestrovka_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Semestrovka_1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_dis_sem1_ControlWork_ComputerClub/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_dis_sem1_ControlWork_ComputerClub/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab01/src/main/java" charset="UTF-8" />
@@ -21,6 +23,10 @@
     <file url="file://$PROJECT_DIR$/lab04_db_web1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab04_db_web2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab04_db_web2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab05_authentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab05_authentication/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab06_bcrypt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab06_bcrypt/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab07_ajax/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab07_ajax/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

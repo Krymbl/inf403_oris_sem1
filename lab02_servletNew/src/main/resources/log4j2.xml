@@ -24,7 +24,7 @@
             <AppenderRef ref="LOCALHOST" />
         </Root>
 
-        <Logger name="org.example"
+        <Logger name="inf403_oris_sem1.lab02"
                 level="debug" additivity="false">
             <AppenderRef ref="LOCALHOST" />
         </Logger>

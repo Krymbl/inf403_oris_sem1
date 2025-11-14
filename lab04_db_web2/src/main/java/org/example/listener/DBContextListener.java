@@ -3,6 +3,7 @@ package org.example.listener;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
+import org.example.service.DbConnection;
 
 @WebListener
 public class DBContextListener implements ServletContextListener {
@@ -15,6 +16,6 @@ public class DBContextListener implements ServletContextListener {
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
-        //DbConnection.releaseConnection( );
+        DbConnection.releaseConnection( );
     }
 }

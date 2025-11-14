@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить компьютерное место</title>
+    <style>
+        .aButton {
+            border: 2px solid black;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            background-color: #ffe6e6;
+            padding: 10px;
+            border: 1px solid red;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Добавить компьютерное место</h1>
+<a class="aButton" href="computerPlaces">Вернуться к списку</a>
+<br><br>
+
+<#if error??>
+    <div class="error">
+        <strong>Ошибка:</strong> ${error}
+    </div>
+</#if>
+
+<form method='post' action='addComputerPlace'>
+    ID игрового места: <input type='number' name='gamingPlaceId' value='' required><br><br>
+    Клавиатура: <input type='text' name='keyboard' value='' required><br><br>
+    Мышь: <input type='text' name='mouse' value='' required><br><br>
+    Наушники: <input type='text' name='headset' value='' required><br><br>
+    Монитор: <input type='text' name='monitor' value='' required><br><br>
+    Стул: <input type='text' name='chair' value='' required><br><br>
+    <input type='submit' class="aButton" value='Добавить компьютерное место'>
+</form>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+        const errorMessage = decodeURIComponent(urlParams.get('error'));
+        alert('Ошибка при создании компьютерного места: ' + errorMessage);
+    }
+    if (urlParams.has('success')) {
+        alert('Компьютерное место успешно добавлено!');
+    }
+</script>
+</body>
+</html>
