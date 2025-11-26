@@ -89,9 +89,8 @@ public class UserService {
         return usersDto;
     }
 
-    public UserDto getById(Long id) throws SQLException {
-        User userTemp = userRepository.findById(id);
-        return convertToUserDto(userTemp);
+    public User getById(Long id) throws SQLException {
+        return userRepository.findById(id);
     }
 
     public UserDto getByUsername(String username) throws SQLException {
@@ -107,6 +106,10 @@ public class UserService {
     public UserDto getByEmail(String email) throws SQLException {
         User userTemp = userRepository.findByEmail(email);
         return convertToUserDto(userTemp);
+    }
+
+    public String getHashedPassword(String username) throws SQLException {
+        return userRepository.getHashPassword(username);
     }
 
     public User authenticate(String username, String password) throws SQLException {

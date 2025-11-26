@@ -25,11 +25,10 @@ public class ReservationsAdminServlet extends HttpServlet {
             List<Reservation> reservations = reservationService.getAll();
             request.setAttribute("reservations", reservations);
             request.getRequestDispatcher("/admin/reservations/showAllReservations.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка бронирований");
         }
     }
 }

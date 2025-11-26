@@ -26,11 +26,10 @@ public class ComputerPlacesAdminServlet extends HttpServlet {
             List<ComputerPlace> computerPlaces = computerPlaceService.getAll();
             request.setAttribute("computerPlaces", computerPlaces);
             request.getRequestDispatcher("/admin/gamingstations/computer/showAllComputerPlaces.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка компьютерных мест");
         }
     }
 }

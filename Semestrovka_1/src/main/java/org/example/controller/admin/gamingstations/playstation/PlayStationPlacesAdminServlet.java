@@ -25,11 +25,10 @@ public class PlayStationPlacesAdminServlet extends HttpServlet {
             List<PlayStationPlace> playStationPlaces = playStationPlaceService.getAll();
             request.setAttribute("playStationPlaces", playStationPlaces);
             request.getRequestDispatcher("/admin/gamingstations/playstation/showAllPlayStationPlaces.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка playstation мест");
         }
     }
 }

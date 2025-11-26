@@ -28,11 +28,10 @@ public class ComputerAssignmentsAdminServlet extends HttpServlet {
             List<ComputerAssignment> computerAssignments = computerAssignmentsService.getAll();
             request.setAttribute("computerAssignments", computerAssignments);
             request.getRequestDispatcher("/admin/devicesassignments/computer/showAllComputerAssignments.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка назначений компьютеров");
         }
     }
 }

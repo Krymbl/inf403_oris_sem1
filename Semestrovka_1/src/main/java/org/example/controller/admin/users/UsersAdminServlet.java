@@ -26,11 +26,10 @@ public class UsersAdminServlet extends HttpServlet {
             List<User> users = userService.getAll();
             request.setAttribute("users", users);
             request.getRequestDispatcher("/admin/users/showAllUsers.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка пользователей");
         }
     }
 }

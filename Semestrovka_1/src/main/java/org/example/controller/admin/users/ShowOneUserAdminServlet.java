@@ -26,7 +26,7 @@ public class ShowOneUserAdminServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String idParam = request.getParameter("id");
-        UserDto user = null;
+        User user = null;
 
         if (idParam != null && !idParam.trim().isEmpty()) {
             try {
@@ -49,7 +49,7 @@ public class ShowOneUserAdminServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        UserDto currentUser;
+        User currentUser;
         try {
             Long id = Long.parseLong(request.getParameter("id"));
             currentUser = userService.getById(id);

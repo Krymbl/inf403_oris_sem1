@@ -25,11 +25,10 @@ public class PlayStationsAdminServlet extends HttpServlet {
             List<PlayStation> playStations = playStationService.getAll();
             request.setAttribute("playStations", playStations);
             request.getRequestDispatcher("/admin/devices/playstations/showAllPlayStations.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка playstation");
         }
     }
 }

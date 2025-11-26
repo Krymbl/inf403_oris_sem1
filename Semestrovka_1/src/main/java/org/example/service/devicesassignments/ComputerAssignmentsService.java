@@ -56,7 +56,6 @@ public class ComputerAssignmentsService {
 
         if (assignment.getUnassignedAt() != null &&
                 !assignment.getUnassignedAt().after(assignment.getAssignedAt())) {
-            // снятие не может быть раньше назначения
             throw new IllegalArgumentException("Время снятия назначения должно быть после времени назначения");
         }
 

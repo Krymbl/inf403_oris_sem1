@@ -27,11 +27,10 @@ public class PlayStationAssignmentsAdminServlet extends HttpServlet {
             List<PlayStationAssignment> playStationAssignments = playStationAssignmentService.getAll();
             request.setAttribute("playStationAssignments", playStationAssignments);
             request.getRequestDispatcher("/admin/devicesassignments/playstation/showAllPlayStationAssignments.ftlh").forward(request, response);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                    "Ошибка при загрузке списка назначений playstation");
         }
     }
 }

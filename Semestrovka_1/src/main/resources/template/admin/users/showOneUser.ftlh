@@ -42,7 +42,7 @@
         <option value='MALE' ${(user.gender == 'MALE')?then('selected', '')}>Мужской</option>
         <option value='FEMALE' ${(user.gender == 'FEMALE')?then('selected', '')}>Женский</option>
     </select>  <br><br>
-    Дата рождения: <input type='date' name='birthday' value='${user.birthday?string("yyyy-MM-dd")!''}'><br><br>
+    Дата рождения: <input type='date' name='birthday' value='<#if user.birthday??>${user.birthday?string("yyyy-MM-dd")}</#if>'><br><br>
     Роль:
     <select name='role' required>
         <option value='USER STANDARD' ${(user.role == 'USER STANDARD')?string('selected', '')}>Пользователь стандарт</option>

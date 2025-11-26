@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/lab05_authentication/pom.xml" />
         <option value="$PROJECT_DIR$/lab06_bcrypt/pom.xml" />
         <option value="$PROJECT_DIR$/Semestrovka_1/pom.xml" />
+        <option value="$PROJECT_DIR$/lab08_ui/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -26,6 +27,7 @@
         <option value="$PROJECT_DIR$/lab04_db/pom.xml" />
         <option value="$PROJECT_DIR$/lab04_db_web/pom.xml" />
         <option value="$PROJECT_DIR$/lab04_db_web1/pom.xml" />
+        <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>
   </component>

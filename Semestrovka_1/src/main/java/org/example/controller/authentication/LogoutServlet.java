@@ -20,6 +20,6 @@ public class LogoutServlet extends HttpServlet {
             session.invalidate();
         }
 
-        request.getRequestDispatcher("/login.ftlh").forward(request, response);
+        request.getRequestDispatcher("index.ftlh").forward(request, response);
     }
 }
