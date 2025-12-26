@@ -28,6 +28,7 @@
 <h1>Самолеты</h1>
 
 <div class="tablo">
+
     <div class="tablo-row tablo-head">
         <div>Код самолёта</div>
         <div>Модель</div>

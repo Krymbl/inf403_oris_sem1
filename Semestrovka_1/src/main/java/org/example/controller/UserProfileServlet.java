@@ -33,7 +33,7 @@ public class UserProfileServlet extends HttpServlet {
         }
 
         try {
-            User currentUser = userService.getById(user.getId());
+            UserDto currentUser = userService.getByUsername(user.getUsername());
             request.setAttribute("user", currentUser);
             request.getRequestDispatcher("/profile.ftlh").forward(request, response);
         } catch (Exception e) {

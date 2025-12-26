@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.service.AirplaneService;
+import org.example.service.AirportService;
 
 import java.io.IOException;
 
@@ -17,6 +18,7 @@ public class AirplanesServlet extends HttpServlet {
     final static Logger logger = LogManager.getLogger(AirplanesServlet.class);
 
     private AirplaneService airplaneService = new AirplaneService();
+
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

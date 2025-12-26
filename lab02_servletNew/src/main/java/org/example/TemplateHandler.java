@@ -23,7 +23,6 @@ public class TemplateHandler {
                 throw new RuntimeException("Шаблон не найден " + templateName);
             }
 
-            //new String(byte[], StandardCharsets.UTF_8) - создает строку из байтов с указанной кодировкой
             String content = new String(is.readAllBytes(), StandardCharsets.UTF_8);
 
             for (Map.Entry<String, String[]> entry : map.entrySet()) {

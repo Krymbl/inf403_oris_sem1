@@ -17,13 +17,13 @@ public class UserRepository {
 
     public void save(User user) throws SQLException {
         String sql = "INSERT INTO users (username, phone_number, first_name, " +
-                "last_name, gender, birthday, email, role, hash_password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "last_name, gender, birthday, email, hash_password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
             setStatement(statement, user);
-            statement.setString(9, user.getHashPassword());
+            statement.setString(8, user.getHashPassword());
 
             int affectedRows = statement.executeUpdate();
             if (affectedRows == 0) {
@@ -271,7 +271,6 @@ public class UserRepository {
         statement.setString(5, user.getGender());
         statement.setDate(6, user.getBirthday());
         statement.setString(7, user.getEmail());
-        statement.setString(8, user.getRole());
     }
 
 

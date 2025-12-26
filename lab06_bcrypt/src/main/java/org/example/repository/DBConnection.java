@@ -22,8 +22,8 @@ public class DBConnection {
         config.setJdbcUrl("jdbc:postgresql://localhost:5432/lab06");
         config.setUsername("postgres");
         config.setPassword("qwerty007");
-        config.setConnectionTimeout(50000); // в миллисекундах
-        config.setMaximumPoolSize(10);
+        config.setConnectionTimeout(50000); //Максимальное время ожидания свободного соединения в миллисекундах
+        config.setMaximumPoolSize(10); // Максимальное количество соединений в пуле
 
         dataSource = new HikariDataSource(config);
 

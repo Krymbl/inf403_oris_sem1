@@ -60,7 +60,7 @@
             <td>${user.lastName!''}</td>
             <td>${user.gender!''}</td>
             <td>${user.birthday!''}</td>
-            <td>${user.role}</td>
+            <td>${user.role!''}</td>
             <td>${user.createdAt}</td>
             <td>${user.updatedAt}</td>
             <td><a href='userShowOne?id=${user.id}'>Изменить</a></td>
