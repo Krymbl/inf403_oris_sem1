@@ -11,6 +11,10 @@
     <modules>
         <module>lab01</module>
         <module>lab04_db_maven</module>
+        <module>lab08_uii</module>
+        <module>lab10_udp</module>
+        <module>Semestrovka_2</module>
+        <module>exam</module>
     </modules>
 
     <dependencies>

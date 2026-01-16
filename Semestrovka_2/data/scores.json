@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-01-10 21:58:00",
+    "duration": 118000,
+    "winner": "Player 2",
+    "player1Score": 8,
+    "durationFormatted": "01:58",
+    "player2Score": 12
+  },
+  {
+    "date": "2026-01-16 12:27:44",
+    "duration": 120000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "02:00",
+    "player2Score": 4
+  },
+  {
+    "date": "2026-01-16 12:29:19",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 10
+  },
+  {
+    "date": "2026-01-16 13:38:22",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 1
+  },
+  {
+    "date": "2026-01-16 13:49:12",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 5
+  },
+  {
+    "date": "2026-01-16 14:17:09",
+    "duration": 1200000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "20:00",
+    "player2Score": 5
+  },
+  {
+    "date": "2026-01-16 21:26:24",
+    "duration": 12000,
+    "winner": "Draw",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 0
+  },
+  {
+    "date": "2026-01-16 21:26:52",
+    "duration": 12000,
+    "winner": "Player 1",
+    "player1Score": 2,
+    "durationFormatted": "00:12",
+    "player2Score": 1
+  }
+]

@@ -1,6 +1,7 @@
 package org.example.listeners;
 
 
+import com.zaxxer.hikari.HikariDataSource;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
@@ -28,7 +29,7 @@ public class DBContextListener implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         if (DBConnection.dataSource != null) {
-            ((com.zaxxer.hikari.HikariDataSource) DBConnection.dataSource).close();
+            ((HikariDataSource) DBConnection.dataSource).close();
         }
     }
 }

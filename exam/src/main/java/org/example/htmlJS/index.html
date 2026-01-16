@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <input type="text" required minlength="200">
+        <span></span>
+        <script>
+            const spanElement = document.querySelector("span");
+            const inputElement = document.querySelector("input");
+            inputElement.addEventListener('input', (event) => {
+                const lengthInput = inputElement.value.length;
+                console.log(lengthInput);
+                spanElement.innerHTML = 200 - lengthInput;
+            })
+        </script>
+    </body>
+</html>

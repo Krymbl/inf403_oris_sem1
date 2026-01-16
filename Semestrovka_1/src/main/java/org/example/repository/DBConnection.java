@@ -37,10 +37,5 @@ public class DBConnection {
         return dataSource.getConnection();
     }
 
-    public static void releaseConnection() {
-        if (dataSource != null) {
-            ((HikariDataSource) dataSource).close();
-        }
-    }
 
 }

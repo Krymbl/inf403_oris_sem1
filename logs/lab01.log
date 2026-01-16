@@ -1,22 +1,96 @@
-2025-12-19 13:21:22,980 [main] INFO  net.HttpServer- start HttpServer
-2025-12-19 13:21:34,486 [Thread-0] DEBUG net.RequestHandler- GET /resource/part?name=tat&region=16 HTTP/1.1
-2025-12-19 13:21:34,489 [Thread-0] DEBUG net.RequestHandler- Host: localhost:8080
-2025-12-19 13:21:34,490 [Thread-0] DEBUG net.RequestHandler- Connection: keep-alive
-2025-12-19 13:21:34,490 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua: "Chromium";v="142", "YaBrowser";v="25.12", "Not_A Brand";v="99", "Yowser";v="2.5"
-2025-12-19 13:21:34,490 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua-mobile: ?0
-2025-12-19 13:21:34,490 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua-platform: "Windows"
-2025-12-19 13:21:34,491 [Thread-0] DEBUG net.RequestHandler- Upgrade-Insecure-Requests: 1
-2025-12-19 13:21:34,492 [Thread-0] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
-2025-12-19 13:21:34,492 [Thread-0] DEBUG net.RequestHandler- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-2025-12-19 13:21:34,492 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Site: none
-2025-12-19 13:21:34,492 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Mode: navigate
-2025-12-19 13:21:34,492 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-User: ?1
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Dest: document
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- 
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- end of request header
-2025-12-19 13:21:34,493 [Thread-0] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@12ad4890
-2025-12-19 13:21:34,495 [Thread-0] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@12ad4890
-2025-12-19 13:22:34,524 [Thread-1] DEBUG net.RequestHandler- null
+2025-12-27 16:10:44,163 [main] INFO  net.HttpServer- start HttpServer
+2025-12-27 16:11:52,685 [Thread-0] DEBUG net.RequestHandler- GET / HTTP/1.1
+2025-12-27 16:11:52,688 [Thread-0] DEBUG net.RequestHandler- Host: localhost:8080
+2025-12-27 16:11:52,688 [Thread-0] DEBUG net.RequestHandler- Connection: keep-alive
+2025-12-27 16:11:52,689 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua: "Chromium";v="142", "YaBrowser";v="25.12", "Not_A Brand";v="99", "Yowser";v="2.5"
+2025-12-27 16:11:52,689 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua-mobile: ?0
+2025-12-27 16:11:52,689 [Thread-0] DEBUG net.RequestHandler- sec-ch-ua-platform: "Windows"
+2025-12-27 16:11:52,689 [Thread-0] DEBUG net.RequestHandler- Upgrade-Insecure-Requests: 1
+2025-12-27 16:11:52,690 [Thread-0] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Site: none
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Mode: navigate
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-User: ?1
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Sec-Fetch-Dest: document
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
+2025-12-27 16:11:52,691 [Thread-0] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
+2025-12-27 16:11:52,692 [Thread-0] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
+2025-12-27 16:11:52,692 [Thread-0] DEBUG net.RequestHandler- 
+2025-12-27 16:11:52,692 [Thread-0] DEBUG net.RequestHandler- end of request header
+2025-12-27 16:11:52,692 [Thread-0] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@7ce5a0dd
+2025-12-27 16:11:52,696 [Thread-0] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@7ce5a0dd
+2025-12-27 16:12:16,897 [Thread-1] DEBUG net.RequestHandler- GET /home HTTP/1.1
+2025-12-27 16:12:16,897 [Thread-1] DEBUG net.RequestHandler- Host: localhost:8080
+2025-12-27 16:12:16,898 [Thread-1] DEBUG net.RequestHandler- Connection: keep-alive
+2025-12-27 16:12:16,898 [Thread-1] DEBUG net.RequestHandler- sec-ch-ua: "Chromium";v="142", "YaBrowser";v="25.12", "Not_A Brand";v="99", "Yowser";v="2.5"
+2025-12-27 16:12:16,898 [Thread-1] DEBUG net.RequestHandler- sec-ch-ua-mobile: ?0
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- sec-ch-ua-platform: "Windows"
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- Upgrade-Insecure-Requests: 1
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- Sec-Fetch-Site: none
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- Sec-Fetch-Mode: navigate
+2025-12-27 16:12:16,899 [Thread-1] DEBUG net.RequestHandler- Sec-Fetch-User: ?1
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- Sec-Fetch-Dest: document
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- 
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- end of request header
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@45700d46
+2025-12-27 16:12:16,901 [Thread-1] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@45700d46
+2025-12-27 16:12:28,668 [Thread-2] DEBUG net.RequestHandler- GET /home?name=danil HTTP/1.1
+2025-12-27 16:12:28,672 [Thread-2] DEBUG net.RequestHandler- Host: localhost:8080
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- Connection: keep-alive
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- sec-ch-ua: "Chromium";v="142", "YaBrowser";v="25.12", "Not_A Brand";v="99", "Yowser";v="2.5"
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- sec-ch-ua-mobile: ?0
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- sec-ch-ua-platform: "Windows"
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- Upgrade-Insecure-Requests: 1
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
+2025-12-27 16:12:28,673 [Thread-2] DEBUG net.RequestHandler- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-12-27 16:12:28,674 [Thread-2] DEBUG net.RequestHandler- Sec-Fetch-Site: none
+2025-12-27 16:12:28,674 [Thread-2] DEBUG net.RequestHandler- Sec-Fetch-Mode: navigate
+2025-12-27 16:12:28,674 [Thread-2] DEBUG net.RequestHandler- Sec-Fetch-User: ?1
+2025-12-27 16:12:28,674 [Thread-2] DEBUG net.RequestHandler- Sec-Fetch-Dest: document
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- 
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- end of request header
+2025-12-27 16:12:28,675 [Thread-2] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@5b8db6b4
+2025-12-27 16:12:28,676 [Thread-2] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@5b8db6b4
+2025-12-27 16:13:05,830 [Thread-3] DEBUG net.RequestHandler- GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1
+2025-12-27 16:13:05,832 [Thread-3] DEBUG net.RequestHandler- Host: localhost:8080
+2025-12-27 16:13:05,832 [Thread-3] DEBUG net.RequestHandler- Connection: keep-alive
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Sec-Fetch-Site: same-origin
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Sec-Fetch-Mode: no-cors
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Sec-Fetch-Dest: empty
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- 
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- end of request header
+2025-12-27 16:13:05,833 [Thread-3] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@1b7da276
+2025-12-27 16:13:05,834 [Thread-3] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@1b7da276
+2025-12-27 16:13:31,138 [Thread-4] DEBUG net.RequestHandler- GET /home?name=danil HTTP/1.1
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- Host: localhost:8080
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- Connection: keep-alive
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- Cache-Control: max-age=0
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- sec-ch-ua: "Chromium";v="142", "YaBrowser";v="25.12", "Not_A Brand";v="99", "Yowser";v="2.5"
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- sec-ch-ua-mobile: ?0
+2025-12-27 16:13:31,140 [Thread-4] DEBUG net.RequestHandler- sec-ch-ua-platform: "Windows"
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Upgrade-Insecure-Requests: 1
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Sec-Fetch-Site: none
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Sec-Fetch-Mode: navigate
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Sec-Fetch-User: ?1
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Sec-Fetch-Dest: document
+2025-12-27 16:13:31,141 [Thread-4] DEBUG net.RequestHandler- Accept-Encoding: gzip, deflate, br, zstd
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- Accept-Language: ru,en;q=0.9
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- Cookie: Phpstorm-50b1ddf0=1f54e09d-1a94-4402-9e66-9e69069ed2dd
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- 
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- end of request header
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@77a1127c
+2025-12-27 16:13:31,142 [Thread-4] DEBUG net.RequestHandler- outputStreamjava.net.Socket$SocketOutputStream@77a1127c

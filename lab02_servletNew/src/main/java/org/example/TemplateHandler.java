@@ -17,7 +17,7 @@ public class TemplateHandler {
         // 4. Передать строку во writer
 
 //        getClass() - получаем объект Class для TemplateHandler
-//        getResourceAsStream() - ищет файл в classpath и открывает как InputStream
+//        getResourceAsStream() - ищет resources в classpath и открывает как InputStream
         try (InputStream is = getClass().getResourceAsStream("/templates/" + templateName)) {
             if (is == null) {
                 throw new RuntimeException("Шаблон не найден " + templateName);
