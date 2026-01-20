@@ -72,7 +72,7 @@ public class RequestHandler {
                     break;
                 }
 
-                //clientSocket.close();
+                clientSocket.close();
             }
         } catch (IOException e) {
             logger.atError().withThrowable(e);

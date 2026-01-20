@@ -25,11 +25,9 @@ public class ClientHandler implements Runnable {
     public void run() {
         try {
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            //как только попадет в поток, сразу же отправиться. Так бы данные попадали в буфер и ждали метод flush()
             out = new PrintWriter(clientSocket.getOutputStream(), true);
 
             String message;
-            // Пока поток не закрыли, in.readline не вернет null, он будет ждать сообщения. Поток закрылся - readline вернет null
             while (running.get() && (message = in.readLine()) != null) {
                 processMessage(message);
             }
@@ -50,12 +48,6 @@ public class ClientHandler implements Runnable {
 
             switch (type) {
                 case "KEY_STATE":
-
-                    //{
-                    //  "type": "KEY_STATE",
-                    //  "direction": "UP",    // или "DOWN", "LEFT", "RIGHT"
-                    //  "pressed": true       // или false при отпускании
-                    //}
                     String direction = json.getString("direction");
                     boolean pressed = json.getBoolean("pressed");
                     server.handlePlayerCommand(playerId, direction, pressed);

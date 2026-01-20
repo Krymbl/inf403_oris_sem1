@@ -7,9 +7,6 @@ import java.util.concurrent.*;
 public class GameEngine {
     private final GameState gameState;
     private final Random random;
-    //Планировщик задач. Выполняет:
-    //Игровой цикл (gameTick())
-    //Спавн пицц (spawnPizzas())
     private final ScheduledExecutorService scheduler;
     private volatile boolean gameFinished = false;
 
@@ -21,36 +18,23 @@ public class GameEngine {
     private int nextPizzaId = 1;
 
     private volatile boolean gameStarted = false;
-//    private volatile boolean waitingForPlayers = true;
 
-    //КЛЮЧЕВОЕ ПОЛЕ! Хранит активные направления для каждого игрока.
-    //Пример: {1: ["UP", "LEFT"], 2: ["DOWN"]}
     private final Map<Integer, Set<String>> activeDirections;
 
     public GameEngine() {
         this.gameState = new GameState();
         this.random = new Random();
-        //Создается планировщик с 2 потоками (один для игрового цикла, один для спавна)
         this.scheduler = Executors.newScheduledThreadPool(2);
         this.activeDirections = new HashMap<>();
 
         activeDirections.put(1, new HashSet<>());
         activeDirections.put(2, new HashSet<>());
 
-        System.out.println("GameEngine создан. Ожидание игроков...");
+        System.out.println("GameEngine создан");
     }
 
     public void start() {
         System.out.println("Запуск игрового движка...");
-
-        //scheduleAtFixedRate создает два периодических таска:
-        //scheduleAtFixedRate(
-        //    Runnable command,    // задача для выполнения (ДОЛЖНА быть Runnable)
-        //    long initialDelay,   // начальная задержка перед первым запуском
-        //    long period,         // период между запусками
-        //    TimeUnit unit        // единицы времени для задержек
-        //)
-        //Это специальный оператор, который позволяет ссылаться на методы, не вызывая их сразу.
 
         scheduler.scheduleAtFixedRate(this::gameTick, 0, GAME_TICK_INTERVAL, TimeUnit.MILLISECONDS);
         scheduler.scheduleAtFixedRate(this::spawnPizzas, 0, PIZZA_SPAWN_INTERVAL, TimeUnit.MILLISECONDS);
@@ -59,13 +43,10 @@ public class GameEngine {
     }
 
     public void stop() {
-        //shutdown() - перестаем принимать новые задачи
         System.out.println("Остановка игрового движка...");
         scheduler.shutdown();
         try {
-            //waitTermination(3) - ждем завершения текущих задач (3 секунды)
             if (!scheduler.awaitTermination(3, TimeUnit.SECONDS)) {
-                //shutdownNow() - если не завершились, принудительно прерываем
                 scheduler.shutdownNow();
             }
         } catch (InterruptedException e) {
@@ -79,7 +60,6 @@ public class GameEngine {
             System.out.println("Два игрока не подключилось");
             return;
         }
-//        waitingForPlayers = false;
         gameStarted = true;
         gameState.setGameActive(true);
 
@@ -109,7 +89,6 @@ public class GameEngine {
             Player player = gameState.getPlayer(playerId);
             if (player == null) continue;
 
-            // Получаем активные направления для этого игрока
             Set<String> directions = activeDirections.get(playerId);
 
             int dx = 0, dy = 0;
@@ -123,10 +102,9 @@ public class GameEngine {
                 }
             }
 
-            // Нормализация диагонального движения (чтобы не было быстрее по диагонали)
             if (dx != 0 && dy != 0) {
-                dx = (int)(dx * 0.7071); // cos(45°) ≈ 0.7071
-                dy = (int)(dy * 0.7071); // sin(45°) ≈ 0.7071
+                dx = (int)(dx * 0.7071); // cos(45°) - 0.7071
+                dy = (int)(dy * 0.7071); // sin(45°) - 0.7071
             }
 
             if (dx != 0 || dy != 0) {
@@ -206,7 +184,6 @@ public class GameEngine {
             gameState.setGameActive(false);
             gameStarted = false;
 
-            // Очищаем все активные направления движения
             activeDirections.get(1).clear();
             activeDirections.get(2).clear();
 
@@ -357,7 +334,6 @@ public class GameEngine {
         gameStarted = false;
         nextPizzaId = 1;
 
-        // Очищаем направления
         activeDirections.get(1).clear();
         activeDirections.get(2).clear();
 

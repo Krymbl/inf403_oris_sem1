@@ -62,5 +62,53 @@
     "player1Score": 2,
     "durationFormatted": "00:12",
     "player2Score": 1
+  },
+  {
+    "date": "2026-01-16 21:28:58",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 5
+  },
+  {
+    "date": "2026-01-16 21:54:35",
+    "duration": 12000,
+    "winner": "Player 1",
+    "player1Score": 1,
+    "durationFormatted": "00:12",
+    "player2Score": 0
+  },
+  {
+    "date": "2026-01-16 21:55:06",
+    "duration": 12000,
+    "winner": "Draw",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 0
+  },
+  {
+    "date": "2026-01-16 21:55:46",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 2
+  },
+  {
+    "date": "2026-01-16 21:56:56",
+    "duration": 12000,
+    "winner": "Player 2",
+    "player1Score": 0,
+    "durationFormatted": "00:12",
+    "player2Score": 7
+  },
+  {
+    "date": "2026-01-17 11:31:30",
+    "duration": 120000,
+    "winner": "Player 2",
+    "player1Score": 3,
+    "durationFormatted": "02:00",
+    "player2Score": 9
   }
 ]

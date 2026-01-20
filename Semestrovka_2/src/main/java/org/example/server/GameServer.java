@@ -12,7 +12,6 @@ public class GameServer {
 
     private ServerSocket serverSocket;
     private GameEngine gameEngine;
-    //Пул потоков для обработки клиентов. Каждый клиент получает свой поток.
     private ExecutorService threadPool;
     private volatile int connectedPlayers = 0;
 
@@ -21,13 +20,6 @@ public class GameServer {
 
     public GameServer() {
         this.clients = new ConcurrentHashMap<>();
-        //Кэшированный пул потоков (создает новые при необходимости)
-        //3. Что делает Executors.newCachedThreadPool():
-        //Создает пул который:
-        //Начинает с 0 потоков
-        //Создает новые когда есть задачи
-        //Переиспользует старые когда они освобождаются
-        //Уничтожает неиспользуемые через 60 секунд простоя
         this.threadPool = Executors.newCachedThreadPool();
         this.gameEngine = new GameEngine();
 
@@ -41,7 +33,6 @@ public class GameServer {
             System.out.println("Сервер запущен");
 
             gameEngine.start();
-            // запускает поток для рассылки состояния
             startGameStateBroadcaster();
 
             System.out.println("Ожидание подключений...");
@@ -76,7 +67,7 @@ public class GameServer {
 
         ClientHandler clientHandler = new ClientHandler(clientSocket, playerId, this);
         clients.put(playerId, clientHandler);
-        //Запускает хендлер в отдельном потоке из пула
+
         threadPool.execute(clientHandler);
 
         sendConnectResponse(playerId);
@@ -119,7 +110,7 @@ public class GameServer {
 
     private void startGameStateBroadcaster() {
         Thread broadcaster = new Thread(() -> {
-            boolean sentGameEnd = false; // Флаг, чтобы отправить GAME_END только один раз
+            boolean sentGameEnd = false;
 
             while (true) {
                 try {
@@ -129,14 +120,12 @@ public class GameServer {
                         GameState state = gameEngine.getGameState();
                         if (state != null) {
 
-                            // Проверяем, закончилась ли игра в GameEngine
                             if (gameEngine.isGameFinished() && !sentGameEnd) {
                                 System.out.println("Broadcaster: Игра завершена, отправляю GAME_END");
 
                                 gameActive = false;
                                 sentGameEnd = true;
 
-                                // Отправляем сообщение об окончании игры
                                 JSONObject endMessage = new JSONObject();
                                 endMessage.put("type", "GAME_END");
                                 Integer winnerId = state.getWinnerId();
@@ -151,7 +140,6 @@ public class GameServer {
                                 continue;
                             }
 
-                            // Если игра еще идет, отправляем обычное состояние
                             if (gameActive) {
                                 JSONObject message = new JSONObject();
                                 message.put("type", "GAME_STATE");
@@ -171,7 +159,6 @@ public class GameServer {
             }
         });
 
-        //setDaemon - фоновый поток, как завершатся все основные, он тоже завершится
         broadcaster.setDaemon(true);
         broadcaster.start();
     }

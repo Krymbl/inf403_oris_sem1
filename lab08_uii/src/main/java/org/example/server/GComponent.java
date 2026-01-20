@@ -42,8 +42,7 @@ public class GComponent extends JComponent{
             @Override
             public void mouseMoved(MouseEvent e) {
                 bYS = e.getY();
-                //При движении мыши обновляем позицию серверной ракетки
-                //e.getY() - получаем Y-координату курсора мыши
+
             }
         });
 

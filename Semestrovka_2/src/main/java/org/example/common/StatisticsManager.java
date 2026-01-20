@@ -37,7 +37,7 @@ public class StatisticsManager {
 
             File file = new File(STATS_FILE);
             try (FileWriter writer = new FileWriter(file)) {
-                writer.write(allResults.toString(2)); // 2 - отступы для читаемости
+                writer.write(allResults.toString(2));
                 System.out.println("Статистика сохранена в " + STATS_FILE);
             }
 

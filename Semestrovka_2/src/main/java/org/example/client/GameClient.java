@@ -46,8 +46,6 @@ public class GameClient {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        // Фокус для обработки клавиш
-        //Дает фокус игровой панели, чтобы она получала нажатия клавиш.
         gamePanel.requestFocusInWindow();
     }
 
@@ -60,23 +58,13 @@ public class GameClient {
 
                 connected = true;
                 System.out.println("Подключено к серверу");
-
-                //Создает daemon-поток для приема сообщений от сервера.
                 Thread receiver = new Thread(this::receiveMessages);
                 receiver.setDaemon(true);
                 receiver.start();
 
             } catch (IOException e) {
-                //При ошибке показывает сообщение в GUI (через invokeLater для потокобезопасности).
-                //TODO можно ли это убрать?
                 SwingUtilities.invokeLater(() -> {
                     gamePanel.setStatus("Ошибка подключения");
-                    //Это потокобезопасный способ обновить графический интерфейс в Java Swing.
-                    //Зачем нужно:
-                    //Swing работает в одном специальном потоке (EDT) - как один кассир в магазине
-                    //Сетевое подключение работает в другом потоке - как курьер
-                    //Курьер не может сам обслуживать клиентов - нужен кассир
-                    //SwingUtilities.invokeLater() - "Сделай это потом в GUI-потоке"
                 });
                 connected = false;
             }
@@ -84,18 +72,15 @@ public class GameClient {
     }
 
     private void startKeyPolling() {
-        // Таймер для отправки состояния клавиш (для плавного движения)
         Timer keyTimer = new Timer(30, e -> sendKeyState());
         keyTimer.start();
     }
 
     private void sendKeyState() {
         if (!connected || !gameStarted) {
-            // Очищаем нажатые клавиши, если игра не активна
-            //TODO почпему мы проверяем на пустоту множества?
-//            if (!gameStarted && !pressedKeys.isEmpty()) {
-//                pressedKeys.clear();
-//            }
+            if (!pressedKeys.isEmpty()) {
+                pressedKeys.clear();
+            }
             return;
         }
 
@@ -104,7 +89,6 @@ public class GameClient {
         boolean left = pressedKeys.contains(KeyEvent.VK_A);
         boolean right = pressedKeys.contains(KeyEvent.VK_D);
 
-        // Отправляем нажатия
         if (up) sendKeyCommand("UP", true);
         if (down) sendKeyCommand("DOWN", true);
         if (left) sendKeyCommand("LEFT", true);
@@ -117,7 +101,6 @@ public class GameClient {
         message.put("direction", direction);
         message.put("pressed", isPressed);
 
-        //TODO получается, потоки нужны только между клиентом и сервером?
         out.println(message.toString());
     }
 
@@ -212,7 +195,6 @@ public class GameClient {
     public void handleKeyReleased(int keyCode) {
         pressedKeys.remove(keyCode);
 
-        // Отправляем отпускание клавиши
         if (connected && gameStarted) {
             String direction = getDirectionFromKeyCode(keyCode);
             if (direction != null) {
@@ -247,7 +229,6 @@ public class GameClient {
                 socket.close();
             }
         } catch (IOException e) {
-            // Игнорируем
         }
     }
 

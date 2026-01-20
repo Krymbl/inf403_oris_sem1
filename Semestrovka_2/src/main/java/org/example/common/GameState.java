@@ -14,7 +14,7 @@ public class GameState {
 
     public static final int FIELD_WIDTH = 800;
     public static final int FIELD_HEIGHT = 600;
-    public static final long TOTAL_GAME_TIME = 12000;
+    public static final long TOTAL_GAME_TIME = 120000;
 
     public GameState() {
         players = new HashMap<>();
