@@ -33,7 +33,7 @@
 <a href='admin/playStationAssignments'>Назначение плейстейшна</a>
 <br>
 <a href='admin/reservations'>Бронирования</a>
-<a href='admin/users'>Пользователи</a>
+<a href='admin/admins'>Пользователи</a>
 <br>
 <br>
 <a href='/computerclub/index'>Главная</a>

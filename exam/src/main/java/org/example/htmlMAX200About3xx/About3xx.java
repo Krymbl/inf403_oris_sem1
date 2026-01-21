@@ -8,6 +8,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+
+//статусные коды 3хх. Какой/ие заголовки надо отдавать.
+// Зачем используют. Почему 302 предпочтительная 301.
+// Как сделать редирект на сервлетах
 public class About3xx extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 1. Стандартный редирект (302)

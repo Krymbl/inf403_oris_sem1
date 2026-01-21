@@ -1,3 +1,5 @@
+
+<!--Написать HTML и JS для создания формы с макс длиной 200, и чтоб показывало сколько осталось-->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -10,7 +12,6 @@
             const inputElement = document.querySelector("input");
             inputElement.addEventListener('input', (event) => {
                 const lengthInput = inputElement.value.length;
-                console.log(lengthInput);
                 spanElement.innerHTML = 200 - lengthInput;
             })
         </script>

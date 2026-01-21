@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+//Написать фильтр для сервлетов, который проверить есть ли у пользователя роль админа
 @WebFilter("/")
 public class FilterAdmin implements Filter {
 

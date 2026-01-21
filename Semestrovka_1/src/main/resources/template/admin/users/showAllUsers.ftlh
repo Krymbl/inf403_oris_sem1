@@ -50,7 +50,7 @@
         <th>Действие</th>
     </tr>
 
-    <#list users as user>
+    <#list admins as user>
         <tr>
             <td>${user.id}</td>
             <td>${user.username}</td>

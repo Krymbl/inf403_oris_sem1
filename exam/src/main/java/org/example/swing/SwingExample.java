@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
+//Создать окно на JavaFX/Swing.
 public class SwingExample {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(()-> {

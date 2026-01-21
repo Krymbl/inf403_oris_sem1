@@ -1,0 +1,21 @@
+<!--1. Написать HTML и JS для формы с максимальной
+длиной 200 символов, с отображением оставшихся символов.-->
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <input type="text" class="main_input" maxlength="200">
+        <span class="main_span">200</span>
+    </div>
+<script>
+    const inputElement = document.querySelector(".main_input");
+    const spanElement = document.querySelector(".main_span");
+    inputElement.addEventListener('input', (event) => {
+        const inputValue = inputElement.value.length;
+        spanElement.innerHTML = 200 - inputValue;
+    })
+</script>
+</body>
+</html>

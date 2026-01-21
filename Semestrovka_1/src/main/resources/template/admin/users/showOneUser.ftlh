@@ -20,7 +20,7 @@
 </head>
 <body>
 <h1>Изменить пользователя</h1>
-<a class="aButton" href="users">Вернуться к списку</a>
+<a class="aButton" href="admins">Вернуться к списку</a>
 <br><br>
 
 <#if error??>

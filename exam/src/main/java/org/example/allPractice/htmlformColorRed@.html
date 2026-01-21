@@ -1,0 +1,36 @@
+<!--3. HTML+js форма логина с ограничением:
+пароль > 5 символов, имя пользователя содержит
+@. Если что-то не так, то подсветить поле красным..-->
+<html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <form>
+        <input type="text" class="login">
+        <input type="text" class="password">
+    </form>
+
+<script>
+    const loginInputElement = document.querySelector(".login");
+    const passwordInputElement = document.querySelector(".password");
+    loginInputElement.addEventListener("input", (event) => {
+        const value = loginInputElement.value;
+        if (!value.includes("@")) {
+            loginInputElement.style.backgroundColor="red";
+        } else {
+            loginInputElement.style.backgroundColor="";
+        }
+    });
+    passwordInputElement.addEventListener("input", (event) => {
+        const value = passwordInputElement.value;
+        if (value.length <= 5) {
+            passwordInputElement.style.backgroundColor="red";
+        } else {
+            passwordInputElement.style.backgroundColor="";
+        }
+    });
+</script>
+</body>
+</html>

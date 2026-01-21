@@ -1,0 +1,40 @@
+<!-- 5. Написать HTML со списком ссылок на главы книги,
+ оглавлением и вложенностью.-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div>
+        <ol>
+            <li><span>Первая глава. Начало </span>
+            <span><a href="books/1">Перейти</a></span>
+            <ul>
+                <li>
+                    <span>1.1 глава. Начало начала </span>
+                    <a href="books/1/1">Перейти</a>
+                </li>
+                <li>
+                    <span>1.2 глава. Не начало начала </span>
+                    <a href="books/1/2">Перейти</a>
+                </li>
+            </ul>
+            </li>
+            <li><span>Вторая глава. Не начало </span>
+                <a href="books/2">Перейти</a>
+                <ul>
+                    <li>
+                        <span>2.1 глава. Начало не начала </span>
+                        <a href="books/2/1">Перейти</a>
+                    </li>
+                    <li>
+                        <span>2.2 глава. Не начало не начала </span>
+                        <a href="books/2/2">Перейти</a>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--3. Написать HTML-форму для логина и пароля.
+В JS проверить, содержит ли логин "@" и длину > 5.-->
+<html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <form class="main_form">
+        <input type="text" class="login">
+        <input type="text" class="password">
+        <button type="button" class="send">Отправить</button>
+    </form>
+<script>
+    const inputElement = document.querySelector(".login");
+    const buttonElement = document.querySelector(".send")
+    const formElement = document.querySelector(".main_form");
+    buttonElement.addEventListener("click", (event) => {
+        const value = inputElement.value;
+        if (value.includes("@") && value.length > 5) {
+            formElement.submit();
+        } else {
+            alert("Логин должен содержать <@> и быть длиннее 5")
+        }
+    })
+</script>
+</body>
+</html>
